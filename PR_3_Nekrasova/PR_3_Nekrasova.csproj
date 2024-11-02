@@ -9,7 +9,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="logo.png" />
+    <None Remove="res\logo.png" />
+    <None Remove="res\Mora.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logo.png" />
+    <Resource Include="res\logo.png" />
+    <Resource Include="res\Mora.ico" />
   </ItemGroup>
 
 </Project>

@@ -6,21 +6,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PR_3_Nekrasova"
         mc:Ignorable="d" 
-        Title="Авторизация" Height="600" Width="800">
+        Title="Главная" Height="600" MinWidth="650" Icon="/res/Mora.ico">
     <Grid Background="#FFCAD4CB">
-        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="15">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="30" Color="#FFC2D9C2" ShadowDepth="0"/>
-            </Border.Effect>
-            <StackPanel Width="490">
-                <TextBlock Text="Привет!" FontSize="30" FontWeight="Bold" Margin="0 0 0 10"/>
-                <TextBox materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF55828B" SelectionBrush="#FF8DB2B9"/>
-                <PasswordBox materialDesign:HintAssist.Hint="Введите пароль" Margin="0 10 0 0" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" SelectionBrush="#FF8DB2B9" CaretBrush="#FF55828B"/>
-                <Grid Margin="0 30 0 20">
-                    <Button HorizontalAlignment="Left" Content="Войти" Background="#FF55828B" BorderBrush="#FF55828B" Foreground="White"/>
-                    <Button HorizontalAlignment="Right" Content="Зарегестрироваться" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FF55828B"/>
-                </Grid>
-            </StackPanel>
-        </Border>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="White" VerticalAlignment="Center" Height="50">
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" Source="/logo.png" Height="30" Width="42" Margin="10,0,0,0"/>
+            <Button x:Name="btnBack" Margin="0 0 10 0" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Назад" Click="btnBack_Click" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FF364958"/>
+        </Grid>
+        <Frame x:Name="MainFrame" Grid.Row="1" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_CR"/>
     </Grid>
 </Window>

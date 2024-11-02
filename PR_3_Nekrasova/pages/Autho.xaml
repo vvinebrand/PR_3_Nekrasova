@@ -1,0 +1,34 @@
+﻿<Page x:Class="PR_3_Nekrasova.pages.Autho"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PR_3_Nekrasova.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Autho">
+
+    <Grid Background="#FFCAD4CB">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition MinWidth="650" MaxWidth="800"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="1" MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="15">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="#FFC2D9C2" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Width="490">
+                <TextBlock Text="Привет!" FontSize="30" FontWeight="Bold" Margin="0 0 0 10"/>
+                <TextBox x:Name="txtLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF55828B" SelectionBrush="#FF8DB2B9"/>
+                <PasswordBox x:Name="paswbPassword" materialDesign:HintAssist.Hint="Введите пароль" Margin="0 10 0 0" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" SelectionBrush="#FF8DB2B9" CaretBrush="#FF55828B"/>
+                <Grid Margin="0 30 0 20">
+                    <Button x:Name="btnEnt" HorizontalAlignment="Left" Content="Войти" Background="#FF55828B" BorderBrush="#FF55828B" Foreground="White"/>
+                    <Button x:Name="btnEntGuest" HorizontalAlignment="Right" Content="Войти как гость" Style="{StaticResource MaterialDesignFlatButton}" Foreground="#FF55828B" Click="btnEntGuest_Click"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
