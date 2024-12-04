@@ -21,7 +21,7 @@
                 <DropShadowEffect BlurRadius="30" Color="#FFC2D9C2" ShadowDepth="0"/>
             </Border.Effect>
             <StackPanel Width="490">
-                <TextBlock Text="Привет!" FontSize="30" FontWeight="Bold" Margin="0 0 0 10"/>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 10"/>
                 <TextBox x:Name="txtLogin" materialDesign:HintAssist.Hint="Введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}" CaretBrush="#FF55828B" SelectionBrush="#FF8DB2B9"/>
                 <PasswordBox x:Name="paswbPassword" materialDesign:HintAssist.Hint="Введите пароль" Margin="0 10 0 0" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" SelectionBrush="#FF8DB2B9" CaretBrush="#FF55828B"/>
                 <Grid Margin="0 30 0 20">
